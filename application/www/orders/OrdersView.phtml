@@ -1,0 +1,35 @@
+<h3></h3>
+
+<!-- <fieldset> -->
+	<div class="divform">
+		<form action="<?= $requestUrl ?>/orders?id=<?=$meal['Id']?>" method="post">
+			<input type="hidden" id="id" name="id" value="<?=$meal['Id']?>">
+			<input type="hidden" id="price" name="price" value="<?=$meal['SalePrice']?>">
+			<div class="divdet">
+
+				<article class="artdet">
+					<div id="meal">Name : <span><?= $meal['Name'];?></span></div>
+					<div class="price">Price : <span><?= $meal['SalePrice'];?></span> Dirhams</div>
+					<div class="price">Description : <?= $meal['Description'];?></div>
+				</article>
+				<div class="image" id="image-id" style="background-image:url()">
+					<img src="<?= $wwwUrl ?>/images/meals/<?= $meal['Photo'];?>">
+				</div>
+			<div class="divpr">
+				<div class="pprice">
+					<div class="price">
+						Prix à payer : <span id="priceid"></span> Dirhams
+					</div>
+					<div class="quan">
+						<input type="text" name="quantite" id="qte" class="quantity" placeholder="Quantité">
+					</div>
+						<div>
+							<input type="submit" name="button button-primary" >
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</form>
+	</div>
+<!-- </fieldset> -->

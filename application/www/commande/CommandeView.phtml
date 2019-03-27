@@ -1,0 +1,14 @@
+
+<?php if($success == 1): ?>
+
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Votre commande a été enregistrée avec succès !</h4>
+    <p class="mb-0">Un e-mail de confirmation vous sera envoyé dans quelques instants</p>
+  </div>
+
+<?php
+else:
+echo "<div class='aler alert-success' role ='alert'>";
+echo '<h4 class="alert-heading" style="color:black">'.$message."</h4>";
+echo "</div>";
+endif;?>

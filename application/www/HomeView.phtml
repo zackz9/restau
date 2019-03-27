@@ -1,0 +1,33 @@
+<!-- Message de notification -->
+
+<!-- Code HTML à écrire -->
+
+
+<!-- Liste des aliments -->
+<table class="generic-table meal-list ">
+    <caption>Carte du restaurant</caption>
+         	<thead>
+        		<tr>
+        		<td>Figure</td>
+        		<td>Nom du produit</td>
+        		<td>Description</td>
+        		<td>Prix</td>
+                <td></td>
+        		</tr>
+        	</thead>
+          <tbody>
+        <!-- Code HTML à écrire -->
+
+        <?php foreach($det as $meal):?>
+        	<tr>
+        		<input type="hidden" id="id-meal" name="" value="<?= $meal['Id'];?>">
+         		<td><?= $meal['Name'];?></td>
+        		<td><img src="<?= $wwwUrl; ?>/images/meals/<?= $meal['Photo'];?>"></td>
+        		<td><?= $meal['Description'];?></td>
+        		<td><?= $meal['SalePrice'];?> Dirhams</td>
+        		<td><a href="<?= $requestUrl;?>/orders?id=<?= $meal['Id'];?>" class="button-primary">Commander</a></td>
+
+        	</tr>
+    	<?php endforeach; ?>
+    </tbody>
+</table>

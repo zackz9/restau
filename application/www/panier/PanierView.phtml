@@ -1,0 +1,88 @@
+<!-- 	<caption>Mon panier</caption>
+
+	<table class="generic-table" style="margin-top: 40px;">
+    	<caption>Carte du restaurant</caption>
+         	<thead>
+        		<tr>
+        		<td>Nom du produit</td>
+        		<td>Description</td>
+        		<td>Prix</td>
+        		<td>Quantite</td>
+        		<td>Total Prix</td>
+        		<td></td>
+        		</tr>
+        	</thead>
+        	<tbody> -->
+
+<?php
+// var_dump($paniers);
+foreach ($panier as $paniers) :
+	?>
+	<!-- 		<tr>
+				<td><?= $paniers['Name']; ?></td>
+				<td><?= $paniers['Description']; ?></td>
+				<td><?= $paniers['SalePrice']; ?></td>
+				<td><?= $paniers['Qte']; ?></td>
+				<td><?= $paniers['total']; ?> $</td>
+				<td><img src="<?= $wwwUrl ?>/images/meals/<?= $paniers['Photo'];?>"></td>
+			</tr>
+
+
+	<input type="hidden" name="Mealid-<?= $paniers['Mealid']; ?>" value="<?= $paniers['Mealid']; ?>"> -->
+
+<?php endforeach;
+ ?>
+
+<fieldset style="margin-top: 100px;">
+	<legend>Mon Panier</legend>
+	<section id="order-summary">
+		<table class="generic-table">
+			<thead>
+        		<tr>
+        			<td>Id du produit</td>
+	        		<td>Nom du produit</td>
+	        		<td>Prix Unitaire</td>
+	        		<td>Quantité</td>
+	        		<td>Prix Total</td>
+	        		<td></td>
+        		</tr>
+	        </thead>
+	        <tbody>
+	        	<?php
+	        	foreach ($panier as $paniers) :
+				?>
+				<tr>
+					<td class="mealid"><?= $paniers['Mealid']; ?></td>
+					<td><?= $paniers['Name']; ?></td>
+					<td><?= $paniers['SalePrice']; ?></td>
+					<td><?= $paniers['Qte']; ?></td>
+					<td><?= $paniers['total']; ?> Dirhams</td>
+					<td>
+						<a href="<?= $requestUrl ?>/panier?id=<?= $paniers['Mealid']; ?>">Delete</a></td>
+				</tr>
+
+			<?php endforeach;
+			 ?>
+	        </tbody>
+		</table>
+	</section>
+	<p style='float:right;'>
+
+		<?php foreach($total as $t): ?>
+			<?php foreach($t as $to):
+				echo 'Le total à payer est : '. $to.' Dirhams';
+			endforeach; ?>
+		<?php endforeach; ?>
+	</p>
+</fieldset>
+	<form action="<?= $requestUrl ?>/Commande" method="POST" style="text-align:center;">
+		<input type="submit" class="button button-primary" name="" value="Valider la commande">
+	</form>
+
+		</tbody>
+</table>
+<script type="text/javascript">
+	function deletetest(id){
+		alert(id);
+	}
+</script>

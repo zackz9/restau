@@ -1,0 +1,24 @@
+<div class="login-f">
+	<div class="formdiv container">
+		<h3 class="log">Login</h3>
+		<span class="error-span" ;"><?=$message;?></span>
+		<form method="post" action="<?= $requestUrl;?>/user/login">
+			<fieldset>
+				<div class="form-g">
+					<input class="form-input" type="text" name="email" placeholder="Identifiant">
+				</div>
+				<div class="form-g">
+					<input class="form-input" type="password" name="password" placeholder="Mot de passe">
+				</div>
+				<div class="form-g">
+					<input type="checkbox" name="remember" id="remember">
+					<label>Remember me!</label>
+					
+				</div>
+				<div class="form-g">
+					<input class="form-input-sub" type="submit" name="" value="Login" class="btnsub">
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>

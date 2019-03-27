@@ -1,0 +1,566 @@
+/*
+ * Styles des éléments HTML
+ */
+/*@import url('https://fonts.googleapis.com/css?family=Ubuntu:300');
+@import url('https://fonts.googleapis.com/css?family=Acme');*/
+
+*
+{
+    box-sizing: border-box;
+}
+
+a
+{
+    color : #1E593B;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.25s;
+}
+a:hover
+{
+    color: black;
+}
+
+body
+{
+    /* structure */
+    /*border-top: 1.5em solid #EF4036;*/
+    /*padding: 1em 5em;*/
+
+    /* presentation */
+
+    background: transparent;
+    font-family: 'Saira', sans-serif;
+}
+
+fieldset
+{
+    /* structure */
+    margin-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    /* presentation */
+    border-color: #1E593B;
+    border-radius: 6px;
+}
+fieldset legend
+{
+    /* structure */
+    padding: 0 0.5em;
+
+    /* presentation */
+    color: #1E593B;
+    font-weight: bold;
+}
+
+footer
+{
+    /* structure */
+    margin-top: 3em;
+
+    /* presentation */
+    text-align: center;
+}
+footer .fa-heart
+{
+    color: #EF4036;
+}
+
+h1
+{
+    color: #fff;
+    font-family: 'Indie Flower', cursive;
+    letter-spacing: 2px;
+    /*text-align: center;*/
+    font-size: 20px;
+    position: relative;
+    margin-left: 6px;
+    transition:all 1s ease-in-out;
+}
+/*h1:hover {
+    transform:translateX(20px) scale(.91);
+}*/
+/*h1 img:hover {
+    transform: scale(1.2) rotate(360deg);
+}*/
+h1 a,
+h1 a:hover
+{
+    color: inherit;
+}
+h1 img
+{
+    margin-right: 0.5em;
+    vertical-align: middle;
+    /*height: 34px;*/
+    /*width: 35px;*/
+    transition:all 1s ease-in-out;
+    border-radius: 56px;
+    box-shadow: 7px 4px 3px grey;
+}
+
+h2
+{
+    /* structure */
+    margin: 1.5em 0;
+
+    /* presentation */
+    color: #1E593B;
+}
+
+
+html.inscription{
+    background: linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.52) ),url('../images/body-bak.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+html.command #myVideo {
+  display: none;
+}
+html.command .user-interface {
+  background: linear-gradient(#000000,#434343);
+}
+html.command main, html.command footer {
+
+  position: relative;
+  top: 150px;
+}
+html.inscription #myVideo{
+    display: none;
+}
+
+html.inscription .user-interface{
+    top: 0;
+}
+
+html.inscription main{
+    margin-top: 100px;
+}
+html .inscription body {
+  background: transparent;
+
+}
+html
+{
+    /*background: url('../images/background.png') repeat;*/
+    overflow-y: scroll;
+}
+
+
+/*
+ * Classes génériques
+ */
+.hidden
+{
+    display: none;
+}
+
+.large
+{
+    font-size: 125%;
+    vertical-align: bottom;
+}
+
+.layout-center
+{
+    text-align: center;
+}
+
+.layout-right
+{
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+
+.link-list,
+.generic-form ul
+{
+    /* structure */
+    padding-left: 0;
+    position: relative;
+
+    /* presentation */
+    list-style-type: none;
+}
+.link-list {
+    padding-left: 0;
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.link-list li
+{
+    /*transition:all 1s ease-in-out;*/
+    display: inline-block;
+    padding: 10px;
+}
+/*.link-list li {
+        transform: translateX(-10px);
+
+}*/
+
+.small
+{
+    font-size: 75%;
+    vertical-align: bottom;
+}
+
+
+/*
+ * CSS de l'interface utilisateur
+ */
+.user-interface
+{
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    z-index: 1000;
+    transition:all 1s ease-in-out;
+    top: 0;
+    /*margin-bottom: 3em;*/
+    /*margin-top: 3em;*/
+}
+
+.user-interface .welcome
+{
+    display: inline-block;
+    margin: 0 1em;
+}
+.user-interface .welcome strong
+{
+    color: #EF4036;
+}
+.user-interface .link-list li a {
+    color: #d3dad7;
+    transition:all 1s ease-in-out;
+}
+.user-interface .link-list li a:hover {
+    color:#fff;
+    /*font-size: 14px;*/
+}
+
+
+.scrolled {
+
+    background: linear-gradient(#000000,#434343);
+    color: white;
+    display: flex;
+    width: 100%;
+    flex-flow: row;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+}
+
+#myVideo {
+    width: 100%;
+    position: relative;
+    /*right:50px;*/
+}
+/*
+ * CSS des tableaux listant des aliments
+ */
+.meal-list img
+{
+    border-radius: 4px;
+    opacity: 0.8;
+    /*transition: opacity 0.25s;*/
+    vertical-align: middle;
+/*        width: 75%;
+*/
+}
+.meal-list img + em
+{
+    margin-left: 1em;
+}
+.meal-list p
+{
+    text-align: justify;
+}
+.meal-list tr:hover img
+{
+    opacity: 1;
+}
+
+/*
+ * CSS de la page d'accueil
+ */
+.notice
+{
+    /* structure */
+    margin-bottom: 2em;
+
+    /* presentation */
+    background-color: rgba(208, 255, 255, 0.33);
+    border: 1px solid #339966;
+    border-radius: 6px;
+    color: #339966;
+    font-size: 1.33em;
+    text-align: center;
+}
+
+
+/*
+ * CSS de la page de commande
+ */
+.basket-empty
+{
+    color: #339966;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.meal-details
+{
+    /* structure */
+    margin-right: 3em;
+    margin-top: 1em;
+    padding: 0.75em;
+
+    /* presentation */
+    background-color: #D0FFFF;
+    border-radius: 4px;
+    border: 1px solid #1E593B;
+}
+.meal-details:after
+{
+    clear: left;
+    content: ' ';
+    display: block;
+}
+.meal-details img
+{
+    float: left;
+    margin-right: 1em;
+}
+.meal-details p
+{
+    /* structure */
+    margin-top: 0;
+
+    /* presentation */
+    text-align: justify;
+}
+
+
+/*
+ * CSS de la page de récapitulatif de la commande
+ */
+.invoice
+{
+    /* structure */
+    margin: 2em 0 1em 50%;
+    padding: 0 1em;
+
+    /* presentation */
+    background-color: #D0FFFF;
+    border-radius: 4px;
+    border: 1px solid #1E593B;
+}
+.invoice .city
+{
+    text-transform: uppercase;
+}
+
+.link_inscr {
+    padding: 20px;
+    background-color: #ec0606;
+    text-transform: uppercase;
+    box-shadow: 15px 8px 60px black;
+    border-radius: 50%;
+    color: #fff;
+    /*transition:all 1s ease-in-out;*/
+}
+.link_inscr:hover {
+    color: black;
+}
+
+.formdiv {
+    text-align: center;
+    width: 90%;
+}
+
+.formdiv form {
+    display: flex;
+    flex-flow: column;
+}
+.formdiv fieldset {
+    display: flex;
+    flex-flow: column;
+    border: none;
+}
+.formdiv form .form-input {
+    background-color: transparent;
+    text-align: center;
+    transition: all .8s ease-in-out;
+    width: 90%;
+    padding: 2%;
+    border: 1px solid #ef4036;
+    border-radius: 4px;
+    font-size: 1em;
+    letter-spacing: 1.2px;
+    color: #fff;
+}
+.formdiv form .form-input:focus {
+    border:1px solid black;
+    width: 100%;
+}
+
+.formdiv form .form-input-sub {
+    width: 60%;
+    background: transparent;
+    padding: 10px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 19px white;
+    transition:all 1s ease-in-out;
+}
+
+.formdiv form .form-input-sub:hover {
+    background-color: white;
+    color:black;
+    transform:scale(1.1);
+
+}
+
+.formdiv form label {
+    text-align: left;
+    letter-spacing: 2px;
+    font-weight: 800;
+    display: inline-block;
+    /*background-color: #21baef;*/
+}
+.formdiv h3 {
+    font-size: 25px;
+    letter-spacing: 1px;
+    /*text-transform: uppercase;*/
+    transition: all 1s ease-in-out;
+    color: #cd6767;
+}
+.login-f .article{
+    width: 30%;
+    background-image: linear-gradient(
+ rgba(0, 0, 0, 0.45),
+ rgba(0, 0, 0, 0.45)
+ ),url(../images/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+}
+
+.login-f .article article{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.login-f .article article h2{
+    color: #fff !important;
+}
+
+.login-f{
+    width: 35%;
+    margin: 0 auto;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    background-color:#181717a1;
+}
+
+.form-g{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.form-g .btnsub {
+    background-color: #ef4036;
+    width: 40%;
+    border: 1px solid #fff;
+}
+.formdiv .log {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-size: 1.2em;
+    padding: 15px;
+    letter-spacing: 1.3px;
+    background: #ffffff26;
+    border-radius: 5px;
+}
+.formdiv .error-span {
+    color:#D01030;
+}
+
+
+
+.divdet {
+        display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.divdet .artdet {
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+.divdet .pprice {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+
+}
+
+#priceid {
+    color:red;
+}
+
+.panier #myVideo{
+    display: none;
+}
+.panier body {
+    /*background: linear-gradient(#000000,#434343);*/
+    /*background-repeat: no-repeat;*/
+}
+
+.panier body main {
+/*
+   height: 100vh;*/
+    /*position: relative;*/
+    width: 100%;
+    margin-top: 20%;
+    /*display: flex;
+    justify-content: center;*/
+}
+.panier .user-interface {
+        background: linear-gradient(#000000,#434343);
+
+}
+.divform {
+
+    /*position: absolute;*/
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 15px;
+    width: 70%;
+    border: 1px solid #b2b2a2d4;
+    background: white;
+}
+.divpr {
+    float: right;
+}

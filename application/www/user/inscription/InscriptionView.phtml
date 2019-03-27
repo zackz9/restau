@@ -1,0 +1,37 @@
+<div class="login-f">
+	<!-- <div> -->
+		<div class="formdiv container">
+			<h3 class="log">Créer un nouveau compte</h3>
+			<span style="color: red;"><?= $message;?></span>
+			<form action='<?=$requestUrl;?>/user/inscription' method="post">
+				<fieldset>
+					<div class="form-g">
+						<!-- <label>Nom : </label> -->
+						<input class="form-input" type="text" name="name" placeholder="Nom">
+					</div>
+					<div class="form-g">
+						<!-- <label>Adresse postale :</label> -->
+						<input class="form-input" type="text" name="address" placeholder="Adresse postale">
+					</div>
+					<div class="form-g">
+						<!-- <label>Adresse E-mail : </label> -->
+						<input class="form-input" type="text" name="email" placeholder="Adresse E-mail">
+					</div>
+					<div class="form-g">
+						<!-- <label>Mot de passe : </label> -->
+						<input class="form-input" type="password" name="password" placeholder="Mot de passe">
+					</div>
+					<div class="form-g">
+						<!-- <label>Mot de passe : </label> -->
+						<input class="form-input" type="password" name="v-password" placeholder="Confirmer le mot de passe">
+					</div>
+					<div class="form-g">
+						<input class="form-input-sub" type="submit" name="" value="Inscription" class="btnsub">
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	<!-- </div> -->
+	<!-- <div class="article">	
+	</div> -->
+</div>

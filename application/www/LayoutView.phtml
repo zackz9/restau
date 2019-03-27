@@ -1,0 +1,108 @@
+<?php
+
+if(!empty($class)){
+    $class = $class;
+}else{
+    $class = '';
+}
+
+
+ ?>
+
+<!DOCTYPE html>
+<html class="<?= $class; ?>">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>3WA Restaurant</title>
+    <link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Michroma" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/normalize-3.0.3.min.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/font-awesome-4.3.0.min.css">
+
+    <!-- Feuilles de styles de l'application -->
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/3wa-resto.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/ui-button.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/ui-form.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/ui-table.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Karla">
+
+    <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+    <!-- JavaScript de l'application -->
+    <script src="<?= $wwwUrl ?>/js/utilities.js"></script>
+</head>
+<body>
+
+<!-- En-tête commune -->
+<!-- <header>
+
+</header> -->
+
+<!-- Interface utilisateur -->
+<nav class="user-interface">
+     <h1>
+        <a href="<?= $requestUrl ?>">
+            <img src="<?= $wwwUrl ?>/images/logoz.png" height="63" width="57" alt="3WA Restaurant">Restaurant - Made In America !
+        </a>
+    </h1>
+    <ul class="link-list">
+        <li><a href="<?= $requestUrl ?>"><i class="fa fa-home"></i> Produits</a></li>
+
+        <?php
+            $session = new UserSession();
+            if ($session->verifySession()) :?>
+
+                <li><a href="<?= $requestUrl;?>/panier"><i class="fa fa-shopping-cart"></i> Mon Panier</a></li>
+                 <li><a href="<?= $requestUrl;?>/user/logout"><i class="fa fa-user"></i> Déconnexion</a></li>
+        <?php        // $http->redirectTo('/');
+            else:
+        ?>
+        <li><a href="<?= $requestUrl;?>/user/login"><i class="fa fa-user"></i> Connexion</a></li>
+        <li><a href="<?= $requestUrl;?>/user/inscription"><i class="fa fa-plus"></i> Créer un compte</a></li>
+
+    <?php endif;?>
+    </ul>
+</nav>
+<!-- <div class="vid">
+    <video class="video-react-video sc-bmyXtO iGaRbO" preload="auto" loop="" playsinline="" autoplay=""><source src="<?= $wwwUrl ?>/images/video.mp4"></video>
+</div> -->
+
+<!-- <div class="video-react-controls-enabled video-react-has-started video-react-playing video-react-fluid video-react-user-inactive video-react-workinghover video-react sc-bmyXtO iGaRbO" role="region" tabindex="-1" ;"><video  class="video-react-video sc-bmyXtO iGaRbO" preload="auto" loop="" playsinline="" autoplay><source src="<?= $wwwUrl ?>/images/video.mp4"></video><div class="video-react-loading-spinner sc-bmyXtO iGaRbO"></div></div> -->
+<video autoplay muted loop id="myVideo">
+  <source src="<?= $wwwUrl ?>/images/video.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<main>
+
+    <!-- Affichage du template lié à la vue -->
+    <?php include $this->viewData['template'] ?>
+
+
+</main>
+
+<!-- Pied de page commun -->
+<footer>
+    <ul class="link-list">
+        <li><img src="<?= $wwwUrl ?>/images/payment/visa.png" alt="Visa"></li>
+        <li><img src="<?= $wwwUrl ?>/images/payment/mastercard.png" alt="MasterCard"></li>
+        <li><img src="<?= $wwwUrl ?>/images/payment/paypal.png" alt="PayPal"></li>
+    </ul>
+    <small>Projet réalisé avec <i class="fa fa-heart"></i>&nbsp; par les élèves de la 3W Academy</small>
+</footer>
+
+<!-- Code principal JavaScript de l'application -->
+<script src="<?= $wwwUrl ?>/js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
